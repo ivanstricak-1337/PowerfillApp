@@ -3,9 +3,9 @@ workflows:
     name: Android Build
     max_build_duration: 60
     environment:
-      vars:
-        JAVA_HOME: /usr/lib/jvm/java-17-openjdk
-      flutter: stable
+      # Let Codemagic use default JDK
+      android: true
+      gradle: true
     scripts:
       - name: Build APK
         script: ./gradlew assembleDebug
