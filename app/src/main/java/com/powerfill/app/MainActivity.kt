@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         vm.cost.observe(this) { cost.animateNumber(0.0,it," €") }
         vm.status.observe(this) { status.text = it }
 
-        btnStart.setOnClickListener { vm.start("YOUR_CHARGER_ID") }
+        btnStart.setOnClickListener { vm.start("244C-0208") }
         btnStop.setOnClickListener { vm.stop("YOUR_SESSION_ID") }
         btnSettings.setOnClickListener { startActivity(Intent(this, SettingsActivity::class.java)) }
         btnHistory.setOnClickListener { startActivity(Intent(this, HistoryActivity::class.java)) }
