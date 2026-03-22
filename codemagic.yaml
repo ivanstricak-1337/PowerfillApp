@@ -2,23 +2,16 @@ workflows:
   powerfill-android:
     name: Powerfill Android Workflow
     max_build_duration: 60
-    environment:
-      # Let Codemagic auto-configure Java & Android SDK
-      android: true
-      gradle: true
     scripts:
-      - name: Clean and Build Debug APK
+      # 1️⃣ Clean and build Debug APK
+      - name: Clean & Build Debug APK
         script: ./gradlew clean assembleDebug
-      # Optional: Build Release APK if signing config exists
+
+      # 2️⃣ Optional Release APK build (skipped if no signing)
       - name: Build Release APK
         script: ./gradlew assembleRelease || echo "Release build skipped (no signing config)"
+
+    # 3️⃣ Artifacts to collect
     artifacts:
       - app/build/outputs/apk/debug/app-debug.apk
       - app/build/outputs/apk/release/app-release.apk
-    publishing:
-      # Optional: Codemagic can upload artifacts to GitHub, email, or Slack
-      email:
-        recipients:
-          - your.email@example.com
-        on_build_success: true
-        on_build_failed: true
