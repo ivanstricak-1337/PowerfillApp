@@ -2,13 +2,14 @@
     <application
         android:allowBackup="true"
         android:theme="@style/Theme.Powerfill">
-        <activity android:name=".SettingsActivity"/>
-        <activity android:name=".HistoryActivity"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".HistoryActivity"/>
     </application>
 </manifest>
