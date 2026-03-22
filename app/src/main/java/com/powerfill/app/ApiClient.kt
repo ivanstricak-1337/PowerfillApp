@@ -4,7 +4,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.*
 
 object Config {
-    var BASE_URL = "https://YOUR-POWERFILL-URL/"
+    var BASE_URL = "https://ivan-fw46.powerfill.app"
     var TOKEN = "Bearer YOUR_API_TOKEN"
 
     var DAY_PRICE = 0.25
