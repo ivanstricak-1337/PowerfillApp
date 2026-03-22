@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#000"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/status"
+        android:textColor="#00E676"
+        android:textSize="18sp"/>
+
+    <TextView android:id="@+id/power"
+        android:text="0 kW"
+        android:textSize="56sp"
+        android:textColor="#FFF"
+        android:layout_marginTop="20dp"/>
+
+    <TextView android:id="@+id/energy"
+        android:textColor="#AAA"/>
+
+    <TextView android:id="@+id/cost"
+        android:textColor="#AAA"/>
+
+    <Button android:id="@+id/start"
+        android:text="Start"/>
+
+    <Button android:id="@+id/stop"
+        android:text="Stop"/>
+
+</LinearLayout>
