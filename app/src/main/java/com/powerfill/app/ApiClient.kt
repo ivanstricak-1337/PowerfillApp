@@ -5,7 +5,7 @@ import java.util.*
 
 object Config {
     var BASE_URL = "https://ivan-fw46.powerfill.app"
-    var TOKEN = "Bearer YOUR_API_TOKEN"
+    var TOKEN: String? = null // Will be set after login
 
     var DAY_PRICE = 0.25
     var NIGHT_PRICE = 0.15
